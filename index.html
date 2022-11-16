@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>Sign In</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+        <script type="module" src="./app.js"></script>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/home.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="gutter-right logo">
+                <img alt="Alchemy Code Lab - A Logo" src="assets/alchemy-favicon.png" />
+            </div>
+        </header>
+        <main class="auth-main">
+            <h1>Log in</h1>
+
+            <div class="left">
+                <div class="auth-container">
+                    <h2>Sign In</h2>
+                    <form id="sign-in">
+                        <span>Fields marked with an asterisk (*) are required</span>
+
+                        <div class="error">
+                            <label for="sign-in-email">Email * </label>
+                            <input
+                                required
+                                autocomplete="email"
+                                type="email"
+                                name="email"
+                                id="sign-in-email"
+                            />
+                        </div>
+                        <div>
+                            <label for="sign-in-password">Password *</label>
+                            <input
+                                required
+                                autocomplete="current-password"
+                                type="password"
+                                name="password"
+                                id="sign-in-password"
+                            />
+                        </div>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="auth-container">
+                    <h2>Sign Up</h2>
+                    <form id="sign-up">
+                        <div>
+                            <label for="sign-up-email">Email *</label>
+                            <input required type="email" name="email" id="sign-up-email" />
+                        </div>
+
+                        <div>
+                            <label for="sign-up-password"> Password * </label>
+                            <span class="form-instructions" id="sign-up-password-instructions">
+                                Password must include: at least 6 characters</span
+                            >
+                            <input
+                                required
+                                autocomplete="new-password"
+                                name="password"
+                                id="sign-up-password"
+                                aria-describedby="sign-up-password-instructions"
+                            />
+                        </div>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
