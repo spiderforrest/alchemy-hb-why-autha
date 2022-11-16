@@ -10,7 +10,7 @@ export function getUser() {
 }
 
 // sign a user up
-export async function signupUser(email, password) {
+export async function signUpUser(email, password) {
     // call the sign up api
     const response = await client.auth.signUp({ email, password });
     if (response.error) return response.error;
